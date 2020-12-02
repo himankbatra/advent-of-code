@@ -1,12 +1,15 @@
 package com.adventofcode._2020;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AdventOfCode2020_01 {
 
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>();
+        /* List<Integer> numbers = new ArrayList<>();
         numbers.add(1993);
         numbers.add(1715);
         numbers.add(1997);
@@ -206,7 +209,17 @@ public class AdventOfCode2020_01 {
         numbers.add(1023);
         numbers.add(1960);
         numbers.add(1050);
-        numbers.add(1293);
+        numbers.add(1293);*/
+
+        String inputFile = "input_01.txt";
+        List<Integer> numbers;
+        try {
+            numbers = Files.lines(Paths.get("src/main/resources", inputFile))
+                    .map(Integer::parseInt)
+                    .collect(Collectors.toList());
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
         numbers.stream()
                 .map(i -> 2020 - i)
                 .filter(numbers::contains)
@@ -229,7 +242,7 @@ public class AdventOfCode2020_01 {
                                     return contains;
                                 }*/)
                 )
-                .map(i->2020-i)
+                .map(i -> 2020 - i)
                 .peek(System.out::println)
                 .reduce((integer, integer2) -> integer * integer2)
                 .ifPresent(a -> System.out.println("answer second part :: " + a));
