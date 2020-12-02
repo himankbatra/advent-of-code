@@ -211,7 +211,7 @@ public class AdventOfCode2020_01 {
         numbers.add(1050);
         numbers.add(1293);*/
 
-        String inputFile = "input_01.txt";
+        String inputFile = "2020/input_01.txt";
         List<Integer> numbers;
         try {
             numbers = Files.lines(Paths.get("src/main/resources", inputFile))

@@ -1010,7 +1010,7 @@ public class AdventOfCode2020_02 {
         passwords.add("5-6 r: rrcrvmr");
         passwords.add("2-7 b: fdbvbdb");
 */
-        String inputFile = "input_02.txt";
+        String inputFile = "2020/input_02.txt";
         List<String> passwords;
         try {
             passwords = Files.readAllLines(Paths.get("src/main/resources", inputFile));
