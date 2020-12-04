@@ -6,9 +6,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdventOfCode2020_02 {
+public class AdventOfCode02 {
     public static void main(String[] args) {
-        String inputFile = "2020/input_02.txt";
+        String inputFile = "2020/input02.txt";
         List<String> passwords;
         try {
             passwords = Files.readAllLines(Paths.get("src/main/resources", inputFile));

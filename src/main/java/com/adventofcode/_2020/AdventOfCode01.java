@@ -6,10 +6,10 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AdventOfCode2020_01 {
+public class AdventOfCode01 {
 
     public static void main(String[] args) {
-        String inputFile = "2020/input_01.txt";
+        String inputFile = "2020/input01.txt";
         List<Integer> numbers;
         try {
             numbers = Files.lines(Paths.get("src/main/resources", inputFile))

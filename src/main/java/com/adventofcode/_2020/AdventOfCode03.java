@@ -6,10 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-public class AdventOfCode2020_03 {
+public class AdventOfCode03 {
 
     public static void main(String[] args) {
-        String inputFile = "2020/input_03.txt";
+        String inputFile = "2020/input03.txt";
         List<String> input;
         try {
             input = Files.readAllLines(Paths.get("src/main/resources", inputFile));
