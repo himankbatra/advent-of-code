@@ -13,7 +13,7 @@ public class AdventOfCode08 {
 
 
     public static void main(String[] args) {
-        String inputFile = "2020/input07.txt";
+        String inputFile = "2020/input08.txt";
         List<String> input;
         try {
             input = Files.readAllLines(Paths.get("src/main/resources", inputFile));
