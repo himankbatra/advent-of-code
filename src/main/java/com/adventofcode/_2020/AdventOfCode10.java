@@ -11,7 +11,7 @@ public class AdventOfCode10 {
 
 
     public static void main(String[] args) {
-        String inputFile = "2020/input09.txt";
+        String inputFile = "2020/input10.txt";
         List<String> input;
         try {
             input = Files.readAllLines(Paths.get("src/main/resources", inputFile));
