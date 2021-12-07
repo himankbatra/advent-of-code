@@ -10,13 +10,13 @@ public class AdventOfCode07 {
 
     public static void main(String[] args) {
 
-        int ans1= IntStream.rangeClosed(1, getInput().max().getAsInt())
-                .map(AdventOfCode07::calc).min().getAsInt();
+        int ans1= IntStream.rangeClosed(1, getInput().max().orElse(0))
+                .map(AdventOfCode07::calc).min().orElse(0);
 
         System.out.println("ans1 = " + ans1);
 
-        int ans2= IntStream.rangeClosed(1, getInput().max().getAsInt())
-                .map(AdventOfCode07::calc1).min().getAsInt();
+        int ans2= IntStream.rangeClosed(1, getInput().max().orElse(0))
+                .map(AdventOfCode07::calc1).min().orElse(0);
 
         System.out.println("ans2 = " + ans2);
 
