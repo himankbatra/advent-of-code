@@ -19,7 +19,7 @@ public class AdventOfCode06 {
                             .orElse("")
                             .split(","))
                     .map(Integer::parseInt)
-                    .collect(Collectors.toCollection(CopyOnWriteArrayList::new));
+                    .collect(Collectors.toList());
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
@@ -33,7 +33,7 @@ public class AdventOfCode06 {
 
         Map<Integer, Long> copy = new HashMap<>(fish);
         for(int day = 0; day < 80; day++)
-            reduce(copy);
+            reproduce(copy);
 
         long sum = 0;
         for(long fishCount : copy.values())
@@ -42,7 +42,7 @@ public class AdventOfCode06 {
 
         copy = new HashMap<>(fish);
         for(int day = 0; day < 256; day++)
-            reduce(copy);
+            reproduce(copy);
 
         sum = 0;
         for(long fishCount : copy.values())
@@ -52,7 +52,7 @@ public class AdventOfCode06 {
     }
 
 
-    public static void reduce(Map<Integer, Long> fish)
+    public static void reproduce(Map<Integer, Long> fish)
     {
         for(int fishLife = 0; fishLife <= 8; fishLife++)
             fish.put(fishLife - 1, fish.getOrDefault(fishLife, 0L));
